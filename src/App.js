@@ -1,11 +1,26 @@
-import React from 'react';
+/** @format */
 
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './containers/HomeConatiner';
+import Layout from './layout/Layout';
+import GlobalStyle from './style/GlobalStyle';
+const Favorites = React.lazy(() => import('./containers/FavoritesConatiner'));
+
+const App = () => {
   return (
-    <div>
- 
-    </div>
+    <React.Suspense fallback={<p>Loading...</p>}>
+      <Router>
+        <Layout>
+          <GlobalStyle />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/favorites' component={Favorites} />
+          </Switch>
+        </Layout>
+      </Router>
+    </React.Suspense>
   );
-}
+};
 
 export default App;
