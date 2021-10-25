@@ -1,6 +1,6 @@
 /** @format */
 
-const API_KEY = 'UvRiUjdhTc8TTX8VuLQzHG2dgEOjcDGN';
+const API_KEY = 'W8ay9BMGUdgLh7r9Xn4zHkXDTSN4kGSA';
 
 export const baseURL = {
   getLocationkey:
