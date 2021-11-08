@@ -15,6 +15,7 @@ const Typography = ({
   onClick,
   align = 'left',
   degree,
+  color,
 }) => {
   const handleClick = () => {
     if (onClick) {
@@ -39,7 +40,12 @@ const Typography = ({
   };
   const degreeSymbol = degree ? '°' : '';
   return (
-    <STypography variant={getSize()} onClick={handleClick} align={align}>
+    <STypography
+      variant={getSize()}
+      onClick={handleClick}
+      align={align}
+      color={color}
+    >
       {children}
       {degreeSymbol}
     </STypography>

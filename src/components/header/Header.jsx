@@ -66,10 +66,14 @@ const Header = () => {
         <SLinkBox>
           <SwitchLabels />
           <Link to='/'>
-            <Typography size='medium'>Home</Typography>
+            <Typography color='white' size='medium'>
+              Home
+            </Typography>
           </Link>
           <Link to='/favorites'>
-            <Typography size='medium'>Favorites</Typography>
+            <Typography color='white' size='medium'>
+              Favorites
+            </Typography>
           </Link>
         </SLinkBox>
       </SToolbar>

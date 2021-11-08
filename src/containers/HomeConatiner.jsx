@@ -29,7 +29,7 @@ const HomeContainer = () => {
     forecast,
     currentConditions,
     degreeUnit,
-  } = useSelector((state) => state); // distructure
+  } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const debounceAutoComplete = debounce(
@@ -136,6 +136,7 @@ const HomeContainer = () => {
     } else {
       reset();
     }
+    return () => console.log('unmount');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locationValue]);
 

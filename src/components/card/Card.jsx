@@ -43,9 +43,7 @@ const ForecastCard = ({ DailyForecasts }) => {
   return (
     <SForecastCard>
       <SCardDetailsBox>
-        <Typography color='white'>
-          {days[new Date(DailyForecasts?.Date).getDay()]}
-        </Typography>
+        <Typography>{days[new Date(DailyForecasts?.Date).getDay()]}</Typography>
         <Typography degree>
           {getDegreeUnit(
             DailyForecasts?.Temperature.Minimum?.Value,

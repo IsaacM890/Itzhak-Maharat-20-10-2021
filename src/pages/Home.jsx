@@ -90,9 +90,7 @@ const Home = (props) => {
     degreeUnit,
     isCurrentLocationInFavList,
   } = props;
-
-
-
+  
   const getFavIconColor = () => {
     return isCurrentLocationInFavList() ? 'red' : 'gray';
   };
